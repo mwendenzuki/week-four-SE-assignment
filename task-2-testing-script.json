@@ -1,0 +1,21 @@
+[
+  { "command": "open", "target": "/practice-test-login/" },
+  { "command": "type", "target": "id=username", "value": "student" },
+  { "command": "type", "target": "id=password", "value": "Password123" },
+  { "command": "click", "target": "id=submit" },
+  {
+    "command": "assertText",
+    "target": "css=.post-title",
+    "value": "Congratulations"
+  },
+
+  { "command": "open", "target": "/practice-test-login/" },
+  { "command": "type", "target": "id=username", "value": "wronguser" },
+  { "command": "type", "target": "id=password", "value": "wrongpass" },
+  { "command": "click", "target": "id=submit" },
+  {
+    "command": "assertText",
+    "target": "css=#error",
+    "value": "Your username is invalid!"
+  }
+]
